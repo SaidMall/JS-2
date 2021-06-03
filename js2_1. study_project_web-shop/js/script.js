@@ -14,7 +14,7 @@
 
 const goods = [ 
     {
-        picture: ,
+       
         title: 'Shirt', 
         discr: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with    Moda Operandi.', 
         price: '$12.00' 
@@ -40,7 +40,7 @@ const goods = [
     
 ]
 
-const renderGoodsItem = (picture, title, discr, price) => {
+const renderGoodsItem = (title, discr, price) => {
     return `<div class="product">
                 <h2>${title}</h2>
                 <p>${discr}</p>
@@ -49,7 +49,7 @@ const renderGoodsItem = (picture, title, discr, price) => {
 }
 
 const renderGoodsList = list => {
-    let goodsList = list.map(item => renderGoodsItem(item.picture, item.title, item.discr, item.price))
+    let goodsList = list.map(item => renderGoodsItem(item.title, item.discr, item.price))
 
     document.querySelector('.product-cards').innerHTML = goodsList
 
