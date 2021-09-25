@@ -82,6 +82,11 @@ header button {
     fill: #ffffff;
 }
 
+.logo-icon{
+    /* position: relative;
+    top: 7px; */
+}
+
 .logo-icon:hover img {
     filter: brightness(30%);
 }
@@ -324,6 +329,12 @@ input[type=search]:focus {
 .personal-account-btn:active svg {
     fill: #F16D7F;
 }
+
+.basket-btn {
+    position: relative;
+    bottom: 3px;
+}
+
 .basket-btn svg {
   width: 41px;
   height: 36px;
@@ -333,6 +344,18 @@ input[type=search]:focus {
 }
 .basket-btn:active svg {
     fill: #F16D7F;
+}
+
+.countBasket {
+    /* display: none; */
+    font-size: 15px;
+    width: 18px;
+    height: 18px;
+    background-color: #F16D7F;
+    color: #ffffff;
+    position: absolute;
+    right: -10px;
+    border-radius: 15px;
 }
 
 .home-block-banner {

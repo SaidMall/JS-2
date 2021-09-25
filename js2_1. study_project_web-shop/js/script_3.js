@@ -21,7 +21,7 @@ const goods = [
       title: 'Jacket', 
       discr: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with    Moda Operandi.', 
       price: '$11.00' ,
-      id: 46546
+      id: 76878676
   },
 
   {
@@ -30,7 +30,21 @@ const goods = [
       discr: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with    Moda Operandi.', 
       price: '$23.00',
       id: 345345345 
-  }
+  }, 
+  {
+    pic: 'img/product-foto6.png',
+    title: 'Socks', 
+    discr: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with    Moda Operandi.', 
+    price: '$9.00' ,
+    id: 343352288
+  },
+  {
+    pic: 'img/product-foto2.png',
+    title: 'Shoes', 
+    discr: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with    Moda Operandi.', 
+    price: '$23.00',
+    id: 345345345 
+}
   
 ]
 
@@ -44,10 +58,10 @@ class GoodsItem {
         this.id = id;
     }
     render() {
-      return `<div class="product">
+      return `<div id=${this.id} class="product">
                   <img src=${this.pic} alt="product-foto" class="image-product">
-                  <a href="#" class="overlay-img" style="width: 360px; height: 420px;"></a>
-                  <button id=${this.id} class="overlay-btn"><span>Add to Cart</span></button>
+                  <a href="product.html" class="overlay-img" style="width: 360px; height: 420px;"></a>
+                  <button class="overlay-btn"><span>Add to Cart</span></button>
                   <h2>${this.title}</h2>
                   <p>${this.discr}</p>
                   <span>${this.price}</span>
@@ -78,6 +92,14 @@ class GoodsList {
 const init = () => {
   const list = new GoodsList();
   list.render();
-};
 
+  const CartAddButton = document.querySelectorAll(".overlay-btn");
+  CartAddButton.forEach( (btnAdd) => {
+    btnAdd.addEventListener('click', () => {
+      console.log('hello')
+    });
+  });
+ 
+};
+ 
 window.onload = init;
